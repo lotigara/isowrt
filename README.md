@@ -2,9 +2,15 @@
 
 Easy way to burn a bootable flash drive with ISO.
 
+### lotigara's notes:
+Changes: added support for files with spaces in the name
+#### TODO for this fork
+- ~~Add support for files with spaces in the name~~
+- Add support for more directories (not just `~/`)
+
 # Available OS
 
-**All UNIX systems are supported.**
+**All UNIX systems with Bash installed are supported.**
 
 # Install
 
@@ -14,8 +20,8 @@ cd isowrt
 chmod +x isowrt.sh
 ./isowrt.sh
 ```
-
-**Soon I will make a PKGBUILD file for Arch-based distributions.**
+# TODO
+- Add PKGBUILD for ArchLinux
 
 # License
 
