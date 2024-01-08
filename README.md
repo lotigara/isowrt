@@ -3,14 +3,16 @@
 Easy way to burn a bootable flash drive with ISO.
 
 ### lotigara's notes:
-Changes: added support for files with spaces in the name
+Changes:
+- added support for files with spaces in the name
+- using pv and shell instead of dd
 #### TODO for this fork
 - ~~Add support for files with spaces in the name~~
 - Add support for more directories (not just `~/`)
 
 # Available OS
 
-**All UNIX systems with Bash installed are supported.**
+**All UNIX *(and UNIX-like)* systems with Bash installed are supported.**
 
 # Install
 
