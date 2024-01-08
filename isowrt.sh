@@ -67,5 +67,7 @@ echo "Wait..."
 
 # Slow and not shows percentage
 #  sudo dd if="${file}" of="/dev/${usbdrive}" bs=4M status=progress && sync
+# pv < ${file} > ${usbdrive}
 
-pv < ${file} > ${usbdrive}
+dd if=${file} | pv | doas dd of=${usbdrive}
+
