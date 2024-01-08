@@ -69,5 +69,4 @@ echo "Wait..."
 #  sudo dd if="${file}" of="/dev/${usbdrive}" bs=4M status=progress && sync
 # pv < ${file} > ${usbdrive}
 
-dd if=${file} | pv | doas dd of=${usbdrive}
-
+dd if=${file} | pv | doas dd of=${usbdrive} bs=4096
