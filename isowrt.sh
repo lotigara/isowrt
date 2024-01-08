@@ -26,7 +26,7 @@ normal=$(tput sgr0)
 shopt -s globstar extglob
 PS3='File number: '
 
-files=($(for i in ~/**/*.iso ; do echo "$i"; done | awk '{ print "\""$0"\""}')
+files=($(for i in ~/**/*.iso ; do echo "$i"; done | awk '{ print "\""$0"\""}'))
 IFS= mapfile -t files < <(find ~/ -type f -name "*.iso" -o -type d -name ".*.iso" | sort)
 
 echo ""
