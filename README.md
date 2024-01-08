@@ -15,7 +15,7 @@ Changes: added support for files with spaces in the name
 # Install
 
 ```bash
-git clone https://github.com/rendick/isowrt.git
+git clone https://github.com/lotigara/isowrt.git
 cd isowrt
 chmod +x isowrt.sh
 ./isowrt.sh

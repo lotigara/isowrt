@@ -26,8 +26,8 @@ normal=$(tput sgr0)
 shopt -s globstar extglob
 PS3='File number: '
 
-files=($(for i in ~/**/*.iso ; do echo "$i"; done | awk '{ print "\""$0"\""}'))
-IFS= mapfile -t files < <(find ~/ -type f -name "*.iso" -o -type d -name ".*.iso" | sort)
+files=($(for i in ~/**/*.iso ; do echo "$i"; done | awk '{ print "\""$0"\""}' &> /dev/null))
+IFS= mapfile -t files < <(find ~/ -type f -name "*.iso" -o -type d -name ".*.iso" | sort /dev/null)
 
 echo ""
 echo "Select a file:"
@@ -65,5 +65,7 @@ done
 
 echo "Wait..."
 
-sudo dd if="${file}" of="/dev/${usbdrive}" bs=4M status=progress && sync
+# Slow and not shows percentage
+#  sudo dd if="${file}" of="/dev/${usbdrive}" bs=4M status=progress && sync
 
+pv < ${file} > ${usbdrive}
