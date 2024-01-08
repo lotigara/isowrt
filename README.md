@@ -14,15 +14,19 @@ Changes:
 
 **All UNIX *(and UNIX-like)* systems with Bash installed are supported.**
 
-# Install
+## Install
+First, you need to install `bash` (Bourne-Again Shell). It usually located in `bash` package, see your distribution instructions.
+And you also need to install `pv`, it is needed to writing the image. I use `pv` in this script because it faster.
 
+And now, you can clone and install (or try) this script by running:
 ```bash
 git clone https://github.com/lotigara/isowrt.git
 cd isowrt
 chmod +x install.sh
-./install.sh
+chmod +x isowrt.sh
+./install.sh # (or isowrt.sh if you want to try this script before installation)
 ```
-# TODO
+## TODO
 - Add PKGBUILD for ArchLinux
 
 # License
