@@ -36,7 +36,7 @@ echo
 
 select type in "${types[@]}" ; do
 	if [[ -n $type ]] ; then
-		echo 'You selected: $type'
+		echo "You selected: $type"
 		break
 	else
 		echo 'Please select between user and system installation'
